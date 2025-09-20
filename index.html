@@ -182,3 +182,37 @@
             <p class="text-sm">&copy; 2025 RankUp. Todos os direitos reservados.</p>
         </div>
     </footer>
+
+    <!-- JS formulário (Sem BE) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('subscribe-form');
+            const emailInput = document.getElementById('email-input');
+            const formMessage = document.getElementById('form-message');
+            const submitButton = form.querySelector('button');
+
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+                const email = emailInput.value;
+                
+                function validateEmail(email) {
+                    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0.9]{1,3}\.[0.9]{1,3}\.[0.9]{1,3}\.[0.9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                    return re.test(String(email).toLowerCase());
+                }
+
+                if (!email || !validateEmail(email)) {
+                    formMessage.textContent = 'Por favor, insira um e-mail válido.';
+                    formMessage.className = 'mt-4 font-semibold h-6 text-red-600';
+                    return;
+                }
+
+                formMessage.textContent = 'Obrigado! Seu e-mail foi adicionado à lista de espera.';
+                formMessage.className = 'mt-4 font-semibold h-6 text-green-600';
+                emailInput.value = '';
+                submitButton.disabled = true;
+                submitButton.textContent = 'Enviado!';
+            });
+        });
+    </script>
+</body>
+</html>

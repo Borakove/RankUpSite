@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RankUp - Análise de SEO Inteligente</title>
+    <meta name="description" content="Em breve: A nova ferramenta para analisar, otimizar e dominar o ranking do seu site. Inscreva-se para acesso antecipado.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Estilos Globais */
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .gradient-bg-light {
+            background-color: #f8fafc; 
+            background-image: radial-gradient(circle at top left, #e0e7ff, #f8fafc 30%);
+        }
+
+        /* --- Botão "shine" via uiverse.io--- */
+        .shine-button {
+          position: relative;
+          padding: 1rem 1.5rem;
+          border-radius: 7px;
+          border: none;
+          font-size: 16px;
+          text-transform: uppercase;
+          font-weight: 600;
+          letter-spacing: 2px;
+          background: #4f46e5;
+          color: #fff;
+          overflow: hidden;
+          box-shadow: 0 0 0 0 transparent;
+          -webkit-transition: all 0.2s ease-in;
+          -moz-transition: all 0.2s ease-in;
+          transition: all 0.2s ease-in;
+          cursor: pointer;
+          text-decoration: none;
+          display: inline-block;
+          text-align: center;
+        }
+
+        .shine-button:hover {
+          background: #4338ca;
+          box-shadow: 0 0 30px 5px rgba(79, 70, 229, 0.7);
+          -webkit-transition: all 0.2s ease-out;
+          -moz-transition: all 0.2s ease-out;
+          transition: all 0.2s ease-out;
+        }
+
+        .shine-button:hover::before {
+          -webkit-animation: sh02 0.5s 0s linear;
+          -moz-animation: sh02 0.5s 0s linear;
+          animation: sh02 0.5s 0s linear;
+        }
+
+        .shine-button::before {
+          content: '';
+          display: block;
+          width: 0px;
+          height: 86%;
+          position: absolute;
+          top: 7%;
+          left: 0%;
+          opacity: 0;
+          background: #fff;
+          box-shadow: 0 0 50px 30px #fff;
+          -webkit-transform: skewX(-20deg);
+          -moz-transform: skewX(-20deg);
+          -ms-transform: skewX(-20deg);
+          -o-transform: skewX(-20deg);
+          transform: skewX(-20deg);
+        }
+
+        @keyframes sh02 {
+          from {
+            opacity: 0;
+            left: 0%;
+          }
+
+          50% {
+            opacity: 1;
+          }
+
+          to {
+            opacity: 0;
+            left: 100%;
+          }
+        }
+
+        .shine-button:active {
+          box-shadow: 0 0 0 0 transparent;
+          -webkit-transition: box-shadow 0.2s ease-in;
+          -moz-transition: box-shadow 0.2s ease-in;
+          transition: box-shadow 0.2s ease-in;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <header class="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-10 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-indigo-600">RankUp</h1>
+            <a href="#cta" class="shine-button">Acesso Antecipado</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="gradient-bg-light pt-32 pb-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl md:text-6xl font-bold text-slate-900 mb-4">SEO Inteligente ao seu Alcance.</h2>
+                <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">Apresentamos o RankUp: a nova ferramenta para diagnosticar, otimizar e subir no ranking do Google. Simples para iniciantes, poderosa para especialistas.</p>
+                <form id="subscribe-form" class="max-w-2xl mx-auto flex flex-col sm:flex-row gap-4 items-center justify-center">
+                    <input type="email" id="email-input" required placeholder="Seu melhor e-mail" class="w-full sm:w-auto flex-grow p-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-indigo-500 focus:outline-none transition h-[60px] text-lg">
+                    <button type="submit" class="shine-button h-[60px] w-full sm:w-auto">QUERO ACESSO</button>
+                </form>
+                <p id="form-message" class="mt-4 font-semibold h-6"></p> <!-- acabei usando h-6 aq para evitar pulo de layout -->
+            </div>
+        </section>
+
+        <!-- Cards -->
+        <section class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl md:text-4xl font-bold text-slate-900">Uma Caixa de Ferramentas Completa</h3>
+                    <p class="text-slate-600 mt-2">Tudo que você precisa para uma base técnica de SEO sólida.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">
+                        <h4 class="text-xl font-bold mb-2">Análise On-Page Detalhada</h4>
+                        <p class="text-slate-600">Verifique títulos, meta descriptions, hierarquia de cabeçalhos e mais de 50 fatores críticos em qualquer página.</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">
+                        <h4 class="text-xl font-bold mb-2">Rastreador de Site Completo</h4>
+                        <p class="text-slate-600">Navegue por todo o seu site para encontrar erros que prejudicam sua performance e a experiência do usuário.</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">
+                        <h4 class="text-xl font-bold mb-2">Detecção de Links Quebrados</h4>
+                        <p class="text-slate-600">Corrija erros 404 e links defeituosos antes que eles afetem seu ranking e frustrem seus visitantes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Pré Footer-->
+        <section id="cta" class="bg-indigo-600 text-white py-20">
+            <div class="container mx-auto px-6 text-center flex flex-col items-center">
+                <h3 class="text-3xl md:text-4xl font-bold mb-4">Pronto para Subir de Nível?</h3>
+                <p class="max-w-2xl mx-auto mb-8">Não perca o lançamento. Junte-se à nossa lista de espera e seja o primeiro a ser notificado, com um desconto especial.</p>
+                <a href="#" onclick="document.getElementById('email-input').focus(); return false;" class="shine-button">Inscreva-se Agora</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-800 text-slate-400 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="#" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" title="Instagram">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.012-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427C2.013 14.784 2 14.43 2 12s.013-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zM12 6.865a5.135 5.135 0 100 10.27 5.135 5.135 0 000-10.27zm0 8.468a3.333 3.333 0 110-6.666 3.333 3.333 0 010 6.666zm5.338-9.87a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" title="WhatsApp">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zM12.04 20.12c-1.5 0-2.95-.4-4.23-1.14l-.3-.18-3.12.82.83-3.04-.2-.31c-.82-1.31-1.26-2.83-1.26-4.38 0-4.54 3.68-8.22 8.22-8.22 2.22 0 4.29.86 5.81 2.38s2.38 3.59 2.38 5.81c0 4.54-3.68 8.22-8.22 8.22zm4.52-6.14c-.25-.12-1.47-.72-1.7-.81-.22-.08-.38-.12-.54.12-.16.25-.64.81-.79.97s-.29.18-.54.06c-.25-.12-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.24-.41.08-.16.04-.3-.02-.42s-.54-1.29-.74-1.77c-.2-.48-.4-.41-.54-.42-.14-.01-.3 0-.46 0s-.42.06-.64.3c-.22.25-.86.84-.86 2.05s.88 2.37 1 2.53c.12.16 1.73 2.63 4.2 3.7.59.26 1.05.41 1.41.52.59.18 1.13.15 1.55.09.47-.06 1.47-.6 1.67-1.18.21-.58.21-1.08.15-1.18-.07-.1-.22-.16-.47-.28z"/>
+                    </svg>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" title="X (Twitter)">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                </a>
+            </div>
+            <p class="text-sm">&copy; 2025 RankUp. Todos os direitos reservados.</p>
+        </div>
+    </footer>
